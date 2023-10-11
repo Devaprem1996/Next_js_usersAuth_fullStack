@@ -1,6 +1,6 @@
 "use client"
 
-import react, { useEffect } from "react";
+import react from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
@@ -20,7 +20,7 @@ export default function SendEmailToReset() {
  
   
   const [loading, setLoading] = react.useState(false);
-  const [botton,setBotton] = react.useState(false);
+  
   const [error, setError] = react.useState("");
   const logIn = async (e:any) => {
     try {
@@ -46,13 +46,7 @@ export default function SendEmailToReset() {
   }
 
   
-  useEffect( () => {
-    if (user.email.length > 0 && user.password.length > 0) {
-      setBotton(true);
-    } else {
-      setBotton(false);
-    }
-  }, [user]);
+  
 
   return (
     <section>
@@ -140,7 +134,7 @@ export default function SendEmailToReset() {
                   onClick={(e)=>{logIn(e)}}
                   className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
                 >
-                  {botton ? "Get started": "login"}
+                   login
                 </button>
               </div>
             </div>

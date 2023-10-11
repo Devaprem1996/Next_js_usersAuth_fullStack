@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 
 
-export default function sendEmailToReset() {
+export default function SendEmailToReset() {
     const [error, setError] = react.useState(false);
     const [reseted, setReseted] = react.useState(false);
     
@@ -40,11 +40,11 @@ export default function sendEmailToReset() {
         const nextURL = window.location.search.split("=")[1];
         setToken(nextURL);
         console.log(token);
-    }, []);
+    }); 
 
     useEffect(() => {
         if (token.length > 0) {
-            resetSetup()  
+            resetSetup()
     }
     },[token])
 

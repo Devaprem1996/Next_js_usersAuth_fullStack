@@ -16,7 +16,7 @@ export default function SignUpPage() {
     password: ""
   });
   const [loading, setLoading] = react.useState(false);
-  const [botton, setBotton] = react.useState(false);
+
   const [error, setError] = react.useState(false);
   const [errorText, setErrorText] = react.useState("");
 
@@ -40,11 +40,7 @@ export default function SignUpPage() {
     }
   }
   
-  useEffect(() => {
-    if (user.email.length > 0 && user.password.length > 0 && user.username.length > 0) {
-      setBotton(true);
-     } 
-  }, [user])
+
 
   
   
@@ -146,7 +142,7 @@ export default function SignUpPage() {
                   type="button"
                   className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
                 >
-                  {botton ? 'Create Account':'No Account'} 
+                  Create Account
                 </button>
               </div>
             </div>
