@@ -12,19 +12,19 @@ import Link  from 'next/link';
   const [data,setData] = react.useState("nothing")
     
 
-  const logout = async () => {
-    try {
-      await axios.get("api/users/logout");
-      toast.success("You have successfully logged out");
-      router.push("/login");
+   const logout = async () => {
+     try {
+       await axios.get("api/users/logout");
+       toast.success("You have successfully logged out");
+       router.push("/login");
 
 
-    } catch (error: any) {
-      console.log("Failed to log out")
-      toast.error("Failed to log out", error);
-    }
+     } catch (error: any) {
+       console.log("Failed to log out")
+       toast.error("Failed to log out", error);
+     }
       
-  }
+   };
 
   const getUserDetails = async () => {
     try {
@@ -70,5 +70,5 @@ import Link  from 'next/link';
         </>
         
       );
-}
+};
 
