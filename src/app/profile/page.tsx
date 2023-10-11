@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import axios from 'axios';
 import Link  from 'next/link';
 
- export default function ProfilePage() {
+ export default function ProfilePage () {
 
   const router = useRouter();
   const [data,setData] = react.useState("nothing")
