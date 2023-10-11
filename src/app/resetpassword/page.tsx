@@ -38,7 +38,7 @@ export default function SendEmailToReset() {
 
     useEffect(() => {
         const nextURL = window.location.search.split("=")[1];
-        setToken(nextURL);
+        setToken(nextURL|| "");
         console.log(token);
     }); 
 
